@@ -11,9 +11,8 @@ function objects(){
     var price = document.getElementById('price').value ;
     if (check(id, name, price) && validate(id,array)) {
         temp = 1
-        // var objects = {}
-
-        return { 'pro_id': id, 'pro_name': name, 'pro_price': price };
+        return {'pro_id':id, 'pro_name':name, 'pro_price' :price }
+        
       }
       else{
           window.alert("pls enter valid  ");
@@ -75,27 +74,27 @@ function validate(id,array){
 function append(arr) {
 //   var table = document.getElementById("myTable");
 
-  var html = '';
+  var html = '<tr><td> Pro_id </td><td> Pro_name </td><td> Pro_price </td></tr>';
 
 for (var i=0; i < array.length; i++){
   html += '<tr>\
   <td>'+array[i].pro_id+'</td>\
   <td>'+array[i].pro_name+'</td>\
   <td>'+array[i].pro_price+'</td>\
-  <td><a href ="#" onclick = editForm('+array.pro_id+')>Edit</a></td>\
+  <td><a href ="#" onclick = edit('+array.pro_id+')>Edit</a></td>\
 </tr>'
 }
-document.getElementById('Table').innerHTML += html;
+document.getElementById('Table').innerHTML = html;
 
 }
-// function edit(id){
-//     var product = getProduct(id);
-//     document.getElementById('id').value = product.pro_id ;
-//     document.getElementById('updatebtn').style.display = 'block'
-// }
-// function getProduct(id){
-// //  for()
-// }
-// function updateProduct(){
-//     var pid = document.getElementById()
-// }
+function edit(id){
+    var product = getProduct(id);
+    document.getElementById('id').value = product.pro_id ;
+    document.getElementById('updatebtn').style.display = 'block'
+}
+function getProduct(id){
+//  for()
+}
+function updateProduct(){
+    var pid = document.getElementById()
+}
