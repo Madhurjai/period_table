@@ -75,11 +75,7 @@ function validate(id,array){
 function append(arr) {
 //   var table = document.getElementById("myTable");
 
-  var html = '<tr>\
-  <th>Product Id</th>\
-  <th>Product Name</th>\
-  <th>Product Price</th>\
-</tr> ';
+  var html = '';
 
 for (var i=0; i < array.length; i++){
   html += '<tr>\
@@ -89,7 +85,7 @@ for (var i=0; i < array.length; i++){
   <td><a href ="#" onclick = editForm('+array.pro_id+')>Edit</a></td>\
 </tr>'
 }
-document.getElementById('Table').innerHTML = html;
+document.getElementById('Table').innerHTML += html;
 
 }
 // function edit(id){
